@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="troll">
+      <div class="giphy-embed-icon">
+        <iframe
+          src="https://giphy.com/embed/5dilzHzSNQ5hXrgdH4"
+          width="200"
+          height="200"
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h1 class="title">you eat shit?</h1>
+      <div class="btn-troll">
+        <div class="btn" id="yes">
+          <button class="btn-2" id="yes-btn">Yes</button>
+        </div>
+        <div class="btn" id="no">
+          <button class="btn-2" type="button" id="no-btn">No</button>
+        </div>
+      </div>
+      <h1 id="content"></h1>
+    </div>
+    <script>
+      const noBtn = document.getElementById("no-btn");
+      const yesBtn = document.getElementById("yes-btn");
+      const no = document.getElementById("no");
+      const yes = document.getElementById("yes");
+      const content = document.getElementById("content");
+      let noBtnScale = 1;
+      let yesBtnScale = 1;
+      no.addEventListener("mouseover", () => {
+        const x = Math.floor(Math.random() * (window.innerWidth - 150));
+        const y = Math.floor(Math.random() * (window.innerHeight - 150));
+        no.style.left = `${x}px`;
+        no.style.top = `${y}px`;
+        noBtnScale -= 0.1;
+        yesBtnScale += 0.1;
+        // Decrease the size of the No button
+        noBtn.style.transform = `scale(${noBtnScale})`;
+        // Increase the size of the Yes button
+        yesBtn.style.transform = `scale(${yesBtnScale})`;
+      });
+      yesBtn.onclick = () => {
+        document.getElementById("content").innerHTML = "tôi biết mà :))<br>";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+#no {
+  z-index: 10;
+  position: absolute;
+  transition: all 0.5s;
+  margin-left: 100px;
+}
+.btn {
+  padding: 10px;
+  width: 100px;
+}
+.troll {
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+.btn-troll {
+  margin-top: 300px;
+  display: flex;
+}
+body {
+  background: url(./img/background6.jpg);
+}
+h1 {
+  color: white;
+}
+
+.giphy-embed-icon {
+  margin-left: 250px;
+}
+.btn-2 {
+  width: 50px;
+  height: 50px;
+}
